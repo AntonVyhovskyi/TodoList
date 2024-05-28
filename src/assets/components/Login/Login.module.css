@@ -1,0 +1,180 @@
+/*                   ----------------- continue with google  -------------------                          */
+
+.unloginHeaderContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(201, 201, 201, 0.684);
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    z-index: 9998;
+}
+
+
+.unloginHeaderBox{
+   
+    border-radius: 10px;
+    padding: 20px 40px;
+}
+
+.unloginHeaderBtn{
+    
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    font-weight: 600;   
+    padding: 15px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.503);
+    transition:  background-color 0.3s, color 0.3s;
+}
+
+.unloginHeaderBtn:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+
+.unloginHeaderBtn:active {
+    background-color: rgb(142, 172, 255);
+
+    
+}
+
+.unloginHeaderBtn>img {
+
+    height: 20px;
+}
+
+
+/*                   ----------------- header  -------------------                          */
+
+
+
+
+.loginHeaderContainer {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0; 
+  }
+  
+  .headerLogo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .headerLogo span {
+    color: #007bff; 
+    margin-right: 5px;
+  }
+  
+  .headerRight {
+    display: flex;
+    align-items: center;
+  }
+  
+  .headerNameAndImg {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .headerName {
+    margin-right: 10px;
+  }
+  
+  .headerImg img {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+  }
+  
+  .buttonLogOut {
+    height: 25px;
+    width: 20px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .buttonLogOutEl1{
+    width: 20px;
+    height: 25px;
+    border-top: solid 3px black;
+    border-left: solid 3px black;
+    border-bottom: solid 3px black;
+  }
+
+  .buttonLogOutEl2 {
+    height: 1px;
+    width: 10px;
+    border-bottom: solid 3px black;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+
+  }
+
+  .buttonLogOutEl3 {
+    position: absolute;
+    top: 50%;
+    height: 8px;
+    width: 8px;
+    border-top: solid 3px black;
+    border-right: solid 3px black;
+    transform: rotate(45deg) translateY(-50%);
+    right: 3px;
+
+  }
+
+  .buttonLogOut:hover .buttonLogOutEl3 {
+    animation: dorEl3 0.8s infinite;
+  }
+
+  .buttonLogOut:hover .buttonLogOutEl2 {
+    animation: dorEl2 0.8s infinite;
+  }
+
+  @keyframes dorEl2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(3px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+  }
+
+  @keyframes dorEl3 {
+    0% {
+        transform: translateX(0)  rotate(45deg) translateY(-50%);
+    }
+
+    50% {
+        transform: translateX(3px)  rotate(45deg) translateY(-50%);
+    }
+
+    100% {
+        transform: translateX(0)  rotate(45deg) translateY(-50%);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .headerName {
+      display: none;
+    }
+  }

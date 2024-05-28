@@ -1,0 +1,66 @@
+.todoListContainer {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+}
+
+.todoAddContainer{
+    padding-top: 15px;
+    gap: 15px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.inputText{
+    border: 1px solid rgba(145, 219, 248, 0.471);
+    border-radius: 5px;
+    padding: 5px;
+    height: 100px;
+    resize: none;
+    width: 100%;
+    
+
+}
+
+.inputText:focus {
+    border: 2px solid rgba(83, 202, 249, 0.471);
+    outline: none;
+}
+
+.buttonAddText{
+    background-color: rgba(145, 219, 248, 0.471);
+    padding: 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+}
+
+.buttonAddText:hover {
+    background-color: rgba(145, 219, 248, 0.842);
+}
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.textareaError {
+    border-color: red;
+    animation: textAreaColor 0.3s forwards;
+}
+
+@keyframes textAreaColor {
+    0% {
+        border-color: red;
+    }
+    100% {
+        border-color: rgba(145, 219, 248, 0.471);
+    }
+}

@@ -1,0 +1,264 @@
+/* ---------------todoHead---------------- */
+
+
+
+.todoContainer {
+    border: solid 1px #CBEEFC;
+    padding: 5px;
+    border-radius: 6px;
+    transition: border 0.5s;
+    
+}
+
+.todoContainerComplated {
+    border: solid 1px rgba(6, 150, 9, 0.709);
+}
+
+.todoContainerComplated .todoHeader {
+    background-color: rgba(6, 150, 9, 0.709);
+   
+}
+
+.todoHeader {
+    margin: -5px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s;
+    
+}
+
+.todoHeaderInput {
+    background-color: #007bff00;
+    outline: none;
+    /* animation: todoHeaderInput 0.5s infinite alternate; */
+    position: relative;
+    border: none;
+    
+}
+.todoHeaderInput:focus::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px; /* Толщина линии */
+    width: 100%; /* Растягиваем линию на всю ширину инпута */
+    background-color: #000000; /* Цвет линии */
+}
+@keyframes todoHeaderInput {
+    0% {
+        border-bottom: 2px solid black;
+    }
+    100%{
+        border-bottom: 2px solid rgba(0, 0, 0, 0);
+    }
+}
+
+.todoText {
+    font-weight: 400;
+}
+
+.redactButton {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transform: rotateX(0);
+    transition: transform 0.3s;
+    background-color: #ffffff00;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 6px;
+}
+
+.redactButton>div {
+ 
+    transform: rotateZ(135deg);
+    width: 7px;
+    height: 7px;
+    border-top: black solid 1px;
+    border-right: black solid 1px;
+}
+
+.redactButtonReverse {
+    transform: rotateX(-180deg)
+}
+
+/* ----------------------ToDoBotton---------------------- */
+
+.todoSubList {
+    padding-top: 10px;
+    max-height: 1000px;
+    overflow: hidden;
+    opacity: 1;
+    transition: max-height 0.3s, opacity 0.6s, padding-top 0.6s;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.todoSubListClose {
+    padding-top: 0px;
+    max-height: 0px;
+    opacity: 0;
+
+}
+
+.todoSubListLeft {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+ 
+}
+
+.todoSubListTasks {
+width: 100%;
+   
+}
+
+.todoSubListTaskList {
+    width: 100%;
+}
+
+.todoSubListNewTask {
+    padding: 10px;
+  
+}
+.todoSubListNewTaskFormEnter{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #CBEEFC;
+    transition: background-color 0.3s;
+}
+.todoSubListNewTaskFormEnter:hover {
+    background-color: #97ddf9;
+}
+.todoSubListNewTaskFormCancel{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #2d2d2d4c;
+    transition: background-color 0.3s;
+
+}
+.todoSubListNewTaskFormCancel:hover {
+    background-color: #2d2d2d91;
+}
+.todoSubListNewTaskForm {
+ display: flex;
+ gap: 10px;
+}
+
+.inputError {
+  
+}
+
+.todoSubListOnAddTask {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #CBEEFC;
+    transition: background-color 0.3s;
+    
+}
+.todoSubListOnAddTask:hover {
+    background-color: #97ddf9;
+}
+
+.todoSubListRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 6px;
+}
+
+.todoSubListBtnStatus {
+    flex-grow: 1;
+    border: 1px solid #CBEEFC;
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 105px;
+}
+.todoSubListBtnStatus button{
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: background-color 0.5s, transform 0.3s;
+    
+}
+
+.todoSubListBtnStatus button:hover {
+    transform: scale(1.04);
+}
+
+.todoReady {
+    background-color: rgba(6, 150, 9, 0.709);
+    
+}
+
+.todoNotReady {
+    
+}
+
+.todoSubListBtnDelete {
+    flex-grow: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #CBEEFC;
+}
+
+.todoSubListBtnDelete button {
+    width: 100%;
+    background-color: rgba(223, 8, 8, 0.909);
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: transform 0.3s;
+}
+
+.todoSubListBtnDelete button:hover {
+    transform: scale(1.04);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.inputError {
+    animation: inputErrorColor 0.3s forwards !important;
+  }
+@keyframes inputErrorColor {
+    0% {
+        border-color: red;
+    }
+
+    100% {
+        border-color: #007bff;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .todoSubList {
+        flex-direction: column;
+    }
+
+    .todoSubListNewTaskFormEnter {
+        font-size: 10px;
+    }
+    .todoSubListNewTaskFormCancel{
+        font-size: 10px;
+    }
+    .todoSubListNewTaskForm {
+        gap: 2px;
+    }
+  }

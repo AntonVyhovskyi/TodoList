@@ -1,0 +1,6 @@
+.appContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 30px rgb(15, 15, 15);
+    border-radius: 0 0 10px 10px;
+}
